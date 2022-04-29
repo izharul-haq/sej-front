@@ -11,4 +11,7 @@ module.exports = bundleAnalyzer({
   env: {
     baseUrl: baseUrl,
   },
+  images: {
+    domains: ["cdn.sejutacita.id"]
+  }
 });
