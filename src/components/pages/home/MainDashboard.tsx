@@ -1,7 +1,7 @@
 import React from 'react';
 import CategorySection from '~/components/common/CategorySection';
-import PopularSection from './PopularSection';
-import RecommendSection from './RecommendSection';
+import PopularSection from './section/PopularSection';
+import RecommendSection from './section/RecommendSection';
 
 const MainDashboard: React.FC = () => {
   return (
