@@ -6,7 +6,7 @@ export const getBooksByCategories = async (
   page?: number,
   size?: number
 ): Promise<Book[]> => {
-  let urlParam = `/book?categoryId=${categoryId}`;
+  let urlParam = `/fee-assessment-books?categoryId=${categoryId}`;
 
   if (page !== undefined) urlParam += `&page=${page}`;
   if (size !== undefined) urlParam += `&size=${size}`;
