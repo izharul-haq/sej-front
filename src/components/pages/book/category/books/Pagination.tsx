@@ -17,7 +17,7 @@ const Pagination: React.FC<Props> = ({ page, categoryId }) => {
           className="button rounded-full border shadow hover:bg-gray-200"
           disabled={page === 1}
           onClick={() =>
-            router.push(`/category/${categoryId}?page=${page - 1}`)
+            router.push(`/book/category/${categoryId}?page=${page - 1}`)
           }
         >
           <GrFormPrevious />
@@ -26,7 +26,7 @@ const Pagination: React.FC<Props> = ({ page, categoryId }) => {
         <button
           className="button rounded-full border shadow hover:bg-gray-200"
           onClick={() =>
-            router.push(`/category/${categoryId}?page=${page + 1}`)
+            router.push(`/book/category/${categoryId}?page=${page + 1}`)
           }
         >
           <GrFormNext />

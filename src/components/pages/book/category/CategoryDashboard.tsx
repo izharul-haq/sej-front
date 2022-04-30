@@ -8,7 +8,6 @@ const CategoryDashboard: React.FC = () => {
       <div className="flex flex-col min-h-screen items-center space-y-2">
         <div className="w-full flex flex-col items-start space-y-4">
           <CategorySection />
-
           <BookSection />
         </div>
       </div>

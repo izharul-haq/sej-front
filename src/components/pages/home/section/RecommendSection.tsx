@@ -2,11 +2,14 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { getBooksByCategories } from '~/api/book';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const RecommendSection: React.FC = () => {
   const { data: books } = useQuery('recommended', () =>
     getBooksByCategories(1, undefined, 15)
   );
+
+  const router = useRouter();
 
   if (!books) return null;
 
@@ -17,7 +20,8 @@ const RecommendSection: React.FC = () => {
         {books.map((book) => (
           <div
             key={book.id}
-            className="flex min-w-max flex-col justify-center items-start border rounded-lg p-3 space-y-2"
+            className="flex min-w-max flex-col justify-center items-start border rounded-lg p-3 space-y-2 cursor-pointer hover:bg-gray-200"
+            onClick={() => router.push(`/book/${book.id}`)}
           >
             <Image src={book.cover_url} width="200px" height="300px" />
             <div>

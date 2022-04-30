@@ -14,7 +14,7 @@ const CategorySection: React.FC = () => {
         {categories.map((category) => (
           <Link
             key={category.id}
-            href={`/category/${category.id}?page=1`}
+            href={`/book/category/${category.id}?page=1`}
             passHref
           >
             <a className="button button-primary rounded-full min-w-max text-sm">
