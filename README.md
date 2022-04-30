@@ -14,6 +14,12 @@ Install dependencies with
 
     yarn install
 
+## How to Configure
+
+1. Copy `.env.example` file and rename it with `.env`.
+
+2. Change `NEXT_PUBLIC_API_URL` value with the correct URL.
+
 ## How to Run
 
 0. Make sure all dependencies already installed.
@@ -32,9 +38,11 @@ Install dependencies with
 
 ## How to Use
 
-0. Make sure [backend-side](https://github.com/izharul-haq/sej-back) of this web application is running.
+1. Make sure [backend-side](https://github.com/izharul-haq/sej-back) of this web application is running.
 
-1. Run this application (follow [How to Run](#how-to-run)).
+   (**NOTE**: Backend in the given link is only a repeater to bypass CORS. If you can configure the real server, please follow [How to Configure](#how-to-configure))
+
+2. Run this application (follow [How to Run](#how-to-run)).
 
 ## Contributors
 
