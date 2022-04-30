@@ -12,7 +12,11 @@ const CategorySection: React.FC = () => {
     <div className="flex flex-col w-full p-2 justify-start">
       <div className="flex overflow-auto space-x-4">
         {categories.map((category) => (
-          <Link key={category.id} href={`/category/${category.id}`} passHref>
+          <Link
+            key={category.id}
+            href={`/category/${category.id}?page=1`}
+            passHref
+          >
             <a className="button button-primary rounded-full min-w-max text-sm">
               {category.name}
             </a>

@@ -8,15 +8,18 @@ import NoBooks from './NoBooks';
 import Pagination from './Pagination';
 
 const BookSection: React.FC = () => {
-  const [page, setPage] = useState<number>(0);
+  // const [page, setPage] = useState<number>(0);
   const [query, setQuery] = useState<string>();
 
   const router = useRouter();
-  const { id } = router.query;
+  const { id, page } = router.query;
+
+  const idNum = parseInt(id as string);
+  const pageNum = parseInt(page as string);
 
   // eslint-disable-next-line prefer-const
   let { data: books, isLoading } = useQuery(`book-${id}-page-${page}`, () =>
-    getBooksByCategories(parseInt(id as string), page, 15)
+    getBooksByCategories(idNum, pageNum - 1, 15)
   );
 
   if (isLoading) return <Loading />;
@@ -49,7 +52,7 @@ const BookSection: React.FC = () => {
         ))}
       </div>
       <div className="w-fullflex justify-center items-center">
-        <Pagination page={page} setPage={setPage} />
+        <Pagination page={pageNum} categoryId={idNum} />
       </div>
     </div>
   );
